@@ -1,0 +1,22 @@
+buildscript {
+    repositories { jcenter() }
+    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:2.2.+' }
+}
+
+description 'Defines and emitts warnings'
+
+apply plugin: 'nebula-plugin'
+apply plugin: 'idea'
+
+contacts {
+    'justin@halfempty.org' {
+        moniker 'Justin Ryan'
+        github 'quidryan'
+    }
+}
+
+dependencies {
+    testCompile('com.netflix.nebula:nebula-test:2.2.+') {
+        exclude group: 'org.codehaus.groovy'
+    }
+}
